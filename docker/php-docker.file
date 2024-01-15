@@ -1,0 +1,9 @@
+from php:8.1-fpm-alpine
+
+arg mode=development
+
+run apk add libpq-dev libpq && docker-php-ext-install pdo_pgsql && apk del libpq-dev && \
+    cp "$PHP_INI_DIR/php.ini-$mode" "$PHP_INI_DIR/php.ini" && \
+    wget https://getcomposer.org/installer && \
+    php installer --install-dir='/usr/bin' --filename='composer'
+

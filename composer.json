@@ -1,0 +1,25 @@
+{
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "yiisoft/yii2-debug": "^2.1",
+        "yiisoft/yii2-bootstrap5": "^2.0",
+        "m1/env": "^2.2"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "docker/boostrap.php",
+            "vendor/yiisoft/yii2/Yii.php"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    }
+}
